@@ -1,0 +1,147 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-image: url("bcg1.jpg");  
+  background-size: cover;
+  background-position: center;   
+  /* background: #e30f56;                 */
+}
+.envelope {
+  position: relative;
+  cursor: pointer;
+}
+
+.back {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  background: #e8ad80;
+}
+.front {
+  position: absolute;
+   /*right: 40px; */
+  right: 10px;
+  border-right: 230px solid #ff7c18;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 220px;
+  z-index: 3;
+}
+.front:before {
+  content: "";
+  position: absolute;
+  border-left: 230px solid #ff7c18;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  height: 0;
+  width: 0;
+  top: -200px;
+  left: -220px;
+}
+.front:after {
+  content: "";
+  position: absolute;
+  border-bottom: 205px solid #ffc006;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -220px;
+}
+.top {
+  position: absolute;
+  border-top: 205px solid #ff460c;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.4s;
+}
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+.letter {
+  position: absolute;
+  /* background: #014a56; */
+  background-image: url("6557663.jpg");
+  width: 430px;
+  height: 280px;
+  top: 10px;
+  left: 10px;
+  transition: 0.2s;
+}
+.envelope:hover .letter {
+  transform: translateY(-150px);
+  z-index: 2;
+}
+.text1 {
+  font-size: 20px;
+  position: absolute;
+  font-weight: bold;
+  color: rgb(199, 52, 52);
+  font-family: Lato  sans-serif;
+  top: -50%;
+  left: -120%
+}
+.text {
+  text-align: center;
+  font-size: 18px;
+  font-family:fantasy Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+
+/*---heart -----*/
+.heart {
+  background-color: red;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding 0.8s linear infinite;
+}
+
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  top: -35px;
+  border-radius: 50px;
+}
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  right: -35px;
+  border-radius: 50px;
+}
